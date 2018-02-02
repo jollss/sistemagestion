@@ -1,20 +1,18 @@
 package gestion
 
 class ServiciosController {
-def index(){  // [servicios:Servicios.findAll()]
+def index(){ 
          [servicios:Servicios.findAll("from Servicios where estatus='pendiente'")]
    }
    def hacerservicio(long id){  
        def servicios=Servicios.get(id )
         [servicios:servicios]
-         //redirect (action:"hacerservicio",id:servicios.id)
+
    }
    
     def save(long id)
     {
-      //println params.id
-      //println params.observaciones
-       //println params.estatus
+   
      def servicios=Servicios.get(id)
        servicios.observacionesMecanico = params.observaciones
        servicios.estatus = params.estatus
@@ -29,15 +27,7 @@ def index(){  // [servicios:Servicios.findAll()]
 
    }
    def guardar(){
- //println params.estatus
-  //println params.comentariosUsuario
- // println params.diaServicio
-  //  println params.horaServicio
-    //  println params.selectmarcas
-    //   println params.selectaut
-      //    println params.selecttipo
-       //   println params.observacionesMecanico
-    //  println params.selectusu
+
           def p =  new Servicios()
          p.estatus = params.estatus
          p.comentariosUsuario = params.comentariosUsuario
@@ -64,7 +54,7 @@ def index(){  // [servicios:Servicios.findAll()]
        def servicios=Servicios.get(params.id as long )
     
       servicios.delete(flush:true)
-      // println params.id
+    
        redirect (action:"citaterminada")
    }
 }
