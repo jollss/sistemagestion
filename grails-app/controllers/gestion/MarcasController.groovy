@@ -30,7 +30,7 @@ class MarcasController {
   }
     def modificarmarca(long id)
   {
-     println id 
+  
  
       def marca=Marcas.get(id)
      [marca:marca]
@@ -39,9 +39,7 @@ class MarcasController {
   {
       
  
-  println params.nombre
-    println params.id
-     println params
+  
             def marca=Marcas.get(id)
     
       marca.nombreMarca = params.nombre
