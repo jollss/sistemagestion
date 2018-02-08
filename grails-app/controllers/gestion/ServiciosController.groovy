@@ -39,7 +39,7 @@ def index(){
          p.observacionesMecanico = params.observacionesMecanico
          p.usuario = Usuario.get(params.selectusu as long) 
          if(p.save(flush:true)){
-             println "8=======================DDDDDDDD"
+             println "8====================DDDDDDDD"
          }else{
              println "No se guardo nada vale chetos la vida "
          }
