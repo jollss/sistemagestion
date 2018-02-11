@@ -2,9 +2,10 @@
 package gestion
 
 class MarcasController {
-    asdhsakjgdjksadgadkasgdjsakda
-    adskhdsakjdhksajdhksajd
-    akshdkajsdhkajsdhkjasdh
+ 121    1423        
+ 12516  
+ 121626 
+ 1212
    
     def index (long id) {
       
