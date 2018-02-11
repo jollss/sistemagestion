@@ -2,14 +2,9 @@
 package gestion
 
 class MarcasController {
- 121    1423        
- 12516  
- 121626 
- 1212
-    lolq    l
-    lola
-    oala
-    
+123213
+123123
+12312  
    
     def index (long id) {
       
