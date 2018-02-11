@@ -21,7 +21,7 @@ environments {
             dbCreate = "update" 
             url = "jdbc:postgresql://localhost:5432/mantenimientoauto"
                username = "postgres"
-               password = '$Abraham21'
+               password = '221310531'
         }
     }
     test {
