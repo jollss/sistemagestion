@@ -37,10 +37,7 @@ class MarcasController {
   }
   def guardar(long id)
   {
-      
- 
-  
-            def marca=Marcas.get(id)
+       def marca=Marcas.get(id)
     
       marca.nombreMarca = params.nombre
      
