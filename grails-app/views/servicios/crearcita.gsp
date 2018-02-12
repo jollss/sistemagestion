@@ -37,7 +37,7 @@
  <br>
  mecanico:<select name="selectusu"> 
      <g:each in="${usuariosrol}" var="usr">
-     <option value=${usr.id}>${usr.usuario.nombreUsuario}</option> 
+     <option value=${usr.usuario.id}>${usr.usuario.username}</option> 
         </g:each>   
 </select><br>
 <g:hiddenField name="observacionesMecanico" value="hacer" /><br/>

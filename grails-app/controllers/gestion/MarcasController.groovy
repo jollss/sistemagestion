@@ -1,6 +1,9 @@
 
 package gestion
+import grails.plugin.springsecurity.annotation.Secured
 
+
+@Secured(['ROLE_MECANICO'])
 class MarcasController {
 
    

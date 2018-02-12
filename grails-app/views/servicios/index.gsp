@@ -25,7 +25,9 @@
   
     <td>${serv.observacionesMecanico} </td>
     <td>${serv.estatus}</td>
-    
+    <td>${serv.comentariosUsuario}</td>
+    <td>${serv.automovil.nombreAuto}</td>
+     <td>${serv.usuario.username}</td>
 
         <td>${serv.estatus}</td>
      <td><g:link controller="Servicios" action="hacerservicio" id="${serv.id}">hacer</g:link>

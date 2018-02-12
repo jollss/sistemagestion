@@ -22,7 +22,7 @@
     <td><g:link controller="Marcas" action="modificarmarca" id="${marca.id}">modificar</g:link>
     /<g:link controller="Marcas" action="eliminar" id="${marca.id}">eliminar</g:link></td>
     
-
+ 
  
   </tr>
  
@@ -34,5 +34,6 @@
         
         <g:link controller="Marcas" action="guardarmarca">agregar marca</g:link></td><br>
     <g:link url="[action:'index',controller:'Servicios']">regresar a realizar servicio</g:link>
+    <g:link controller='logout'>Logout</g:link>
     </body>
 </html>

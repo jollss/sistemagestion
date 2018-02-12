@@ -1,5 +1,7 @@
 package gestion
-
+import com.yourapp.Usuario
+import com.yourapp.UsuarioRole
+import com.yourapp.Role
 class ServiciosController {
 def index(){ 
          [servicios:Servicios.findAll("from Servicios where estatus='pendiente'")]
@@ -21,16 +23,15 @@ def index(){
     }
   
   def crearcita(){
-     
-      [marcas:Marcas.findAll(),automoviles:Automovil.findAll(),tiposervicios:Tiposervicio.findAll()
-         ] 
+    [marcas:Marcas.findAll(),automoviles:Automovil.findAll(),tiposervicios:Tiposervicio.findAll()
+          ,usuarios:Usuario.findAll(),usuariosrol:UsuarioRole.findAll("from UsuarioRole where role_id=2")]
          
 
    }
    def guardar(){
           def p =  new Servicios()
          p.estatus = params.estatus
-      
+       p.comentariosUsuario = params.comentariosUsuario
 
          p.diaServicio = params.diaServicio
          p.horaServicio =  params.horaServicio
@@ -38,7 +39,7 @@ def index(){
          p.automovil = Automovil.get(params.selectaut as long)
          p.tiposervicio = Tiposervicio.get(params.selecttipo as long)
          p.observacionesMecanico = params.observacionesMecanico
-    
+    p.usuario = Usuario.get(params.selectusu as long) 
          if(p.save(flush:true)){
              println "8====================DDDDDDDD"
          }else{
