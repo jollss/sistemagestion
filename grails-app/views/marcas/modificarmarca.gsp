@@ -1,4 +1,4 @@
-
+<!--
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
@@ -19,7 +19,7 @@
             <g:link controller="Marcas" action="index">consultar marca</g:link></td><br>
      <g:link url="[action:'index',controller:'Servicios']">regresar a realizar servicio</g:link>
     </body>
-</html>
+</html>-->
        <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -282,27 +282,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </header>
                     <div class="panel-body">
                         <div class="position-center">
-                            <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                        <label class="col-sm-3 control-label">Nombre de la Marca </label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" placeholder="placeholder">
+                    <g:form Controller="Marcas" action="guardar"class="form-horizontal" role="form">
+                       <g:hiddenField name="id" value="${marca.id}"/><br/>
+                        <div class="form-group">
+            
+             
+            <label class="col-sm-3 control-label" >nombre marca: </label>
+            
+           
+            <div class="col-sm-6">
+                           
+        <g:textField type="text" class="form-control" name="nombre" placeholder="${marca.nombreMarca}"/><br/>
                         </div>
                     </div>
-                                
-                          
-                           
-                            <div class="form-group">
+          <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
+                                    <g:actionSubmit class="btn btn-danger" value="guardar"/>
                                   
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-lg-offset-2 col-lg-10">
-                                    <button type="submit" class="btn btn-danger">Sign in</button>
-                                </div>
-                            </div>
-                        </form>
+           
+        </g:form>
+                           
+                     
+                        
+                                
+                          
+                           
+                          
+                           
+                        
                         </div>
                     </div>
                 </section>
