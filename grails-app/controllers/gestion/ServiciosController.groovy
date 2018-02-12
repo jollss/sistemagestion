@@ -23,21 +23,22 @@ def index(){
   def crearcita(){
      
       [marcas:Marcas.findAll(),automoviles:Automovil.findAll(),tiposervicios:Tiposervicio.findAll()
-          ,usuarios:Usuario.findAll(),usuariosrol:UsuarioRol.findAll("from UsuarioRol where rol_id=2")]
+         ] 
+         
 
    }
    def guardar(){
-
           def p =  new Servicios()
          p.estatus = params.estatus
-         p.comentariosUsuario = params.comentariosUsuario
+      
+
          p.diaServicio = params.diaServicio
          p.horaServicio =  params.horaServicio
          p.marca = Marcas.get(params.selectmarcas as long)
          p.automovil = Automovil.get(params.selectaut as long)
          p.tiposervicio = Tiposervicio.get(params.selecttipo as long)
          p.observacionesMecanico = params.observacionesMecanico
-         p.usuario = Usuario.get(params.selectusu as long) 
+    
          if(p.save(flush:true)){
              println "8====================DDDDDDDD"
          }else{

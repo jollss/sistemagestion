@@ -12,7 +12,7 @@
     <body>
     <center><h1>Servicios pendientes</h1>
         <g:each in="${servicios}" var="serv">
-             <table>
+             
   <tr>
     <th >observaciones</th>
     <th>estatus</th>
@@ -22,19 +22,17 @@
     <th>estatus</th>
     <th>acciones</th>
   </tr>
-  <tr>
+  
     <td>${serv.observacionesMecanico} </td>
     <td>${serv.estatus}</td>
-    <td>${serv.comentariosUsuario}</td>
-    <td>${serv.automovil.nombreAuto}</td>
-     <td>${serv.usuario.nombreUsuario}</td>
+    
 
         <td>${serv.estatus}</td>
      <td><g:link controller="Servicios" action="hacerservicio" id="${serv.id}">hacer</g:link>
-  </tr>
+  
  
 
-</table>
+
       
         </g:each>
   </center>
