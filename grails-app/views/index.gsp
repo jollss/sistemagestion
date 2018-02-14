@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--logo start-->
 <div class="brand">
     <a href="index.html" class="logo">
-      GESTION
+      GESTION 
     </a>
 
 </div>
@@ -60,7 +60,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- inbox dropdown start-->
         <center>
      SISTEMA DE GESTION DE CITAS Y SERVICIOS
-    
+    BIENVENIDO <sec:username/>
+    <g:set var="dia">
+        HOY ES :${new Date()}
+        </g:set>
+        <p>${dia}</p>
+      
         </center>
         <!-- inbox dropdown end -->
         <!-- notification dropdown start-->
@@ -83,6 +88,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 market-update-gd">
 				
 			</div>
+            <!------------------------------inicio de if usuarios-------------------------------------------------------->
+    
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-1">
 					<div class="col-md-4 market-update-right">
@@ -90,23 +97,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-8 market-update-left">
 					
-                        <g:link url="[action:'crearcita',controller:'Servicios']"><h4>USUARIO</h4></g:link></li>	
+                        <g:link url="[action:'crearcita',controller:'Servicios']"><h4>USUARIO <sec:username/></h4></g:link></li>	
 						
 						<p>checar estatus y creacion de la cita</p>
                                                  <p><g:link class="fa fa-key" controller='logout'>cerrar sesion</g:link></p>
 					</div>
 				  <div class="clearfix"> </div>
                                   
-				</div><!--ESTE ES EL CHIDO HAHAHAH  -->
+				</div>
+<!--ESTE ES EL CHIDO HAHAHAH  -->
 			</div>
+<!---------------------------------------------fin de if usuarios -------------------------------------------->
+                   <!------------------------------inicio de else mecanicos-------------------------------------------------------->
 			
-			<div class="col-md-3 market-update-gd">
+                                                 <div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-4">
 					<div class="col-md-4 market-update-right">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-					<g:link url="[action:'index',controller:'Servicios']"><h4>MECANICO</h4></g:link></li>	
+					<g:link url="[action:'index',controller:'Servicios']"><h4>MECANICO <sec:username/></h4></g:link></li>	
                                             
 						
 						<p>hacer servicio,agrega marcas,automoviles..etc</p>
@@ -115,6 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
+      <!---------------------------------------------fin de else mecanicos -------------------------------------------->
 		   <div class="clearfix"> </div>
 		</div>	
 		<!-- //market-->
