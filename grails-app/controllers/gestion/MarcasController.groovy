@@ -20,7 +20,7 @@ class MarcasController {
         def marca = new Marcas(params)
       
         marca.save()
-        redirect (action:"index",id:marca.id)
+        redirect (action:"index")
     }
   
   def eliminar(long id)
@@ -35,9 +35,9 @@ class MarcasController {
     def modificarmarca(long id)
   {
   
- 
-      def marca=Marcas.get(id)
+def marca=Marcas.get(id)
      [marca:marca]
+     
   }
   def guardar(long id)
   {
@@ -49,6 +49,7 @@ class MarcasController {
    
         redirect (action:"index")
     }
+ 
   
 }
 

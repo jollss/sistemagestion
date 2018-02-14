@@ -1,25 +1,4 @@
-<!--
-<%@ page contentType="text/html;charset=UTF-8" %>
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>modificar</title>
-    </head>
-    <body>
-        <h1>Marca a modificar</h1>
-        <g:form Controller="Marcas" action="guardar">
-            <g:hiddenField name="id" value="${marca.id}"/><br/>
-             
-            <label>nombre marca: </label>
-            <g:textField name="nombre" placeholder="${marca.nombreMarca}"/><br/>
-         
-            <g:actionSubmit value="guardar"/>
-        </g:form>
-            <g:link controller="Marcas" action="index">consultar marca</g:link></td><br>
-     <g:link url="[action:'index',controller:'Servicios']">regresar a realizar servicio</g:link>
-    </body>
-</html>-->
        <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -140,30 +119,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- settings end -->
         <!-- inbox dropdown start-->
         <li id="header_inbox_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+           <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <i class="fa fa-envelope-o"></i>
                 <span class="badge bg-important">4</span>
             </a>
             <ul class="dropdown-menu extended inbox">
                 <li>
-                    <p class="red">TUS SERVICIOS</p>
+                    <p class="red">TUS MARCAS</p>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="photo"><img alt="avatar" src="images/3.png"></span>
+                   
                                 <span class="subject">
-                                <span class="from">Jonathan Smith</span>
-                                <span class="time">Just now</span>
+                                <span class="from">NOMBRE DE LA MARCA</span>
+                               
                                 </span>
                                 <span class="message">
-                                    Hello, this is an example msg.
+                                    ${mar}
                                 </span>
                     </a>
                 </li>
             
              
                 <li>
-                    <a href="#">TODOS LOS MENSAJES</a>
+                    <a href="#">TODAS LAS MARCAS</a>-->
                 </li>
             </ul>
         </li>
@@ -224,9 +203,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
-                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                <!--<li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>-->
+                <li><g:link class="fa fa-key" controller='logout'>cerrar sesion</g:link>
+                   </li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -243,10 +223,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a href="index.html">
-                        <i class="fa fa-dashboard"></i>
-                        <span>inicio</span>
-                    </a>
+                      <i><g:link class="fa fa-dashboard" controller="Marcas" action="index" >  <span>inicio</span></g:link>
+                   
+                     </i>
+                      
+                   
                 </li>
                 
               
@@ -256,9 +237,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Marcas</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="basic_table.html">Eliminar Marca</a></li>
-                        <li><a href="responsive_table.html">Modificar Marca</a></li>
-                         <li><a href="responsive_table.html">Guardar Marca</a></li>
+                       
+                        <li>    <g:link url="[action:'index',controller:'Servicios']">regresar a realizar servicio</g:link>
+                            </li>
+                        <li> <g:link controller="Marcas" action="guardarmarca">agregar marca</g:link>
+                         </li>
                     </ul>
                 </li>
            
@@ -278,21 +261,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Marca a Resgistrar
+                       nOMBRE DE MARCA :${marca.nombreMarca}
+              
                     </header>
+                 
                     <div class="panel-body">
                         <div class="position-center">
-                    <g:form Controller="Marcas" action="guardar"class="form-horizontal" role="form">
+                    <g:form Controller="Marcas" action="guardar" class="form-horizontal" role="form">
                        <g:hiddenField name="id" value="${marca.id}"/><br/>
                         <div class="form-group">
             
              
-            <label class="col-sm-3 control-label" >nombre marca: </label>
+            <label class="col-sm-3 control-label" >nombre marca A Modificar: </label>
             
            
             <div class="col-sm-6">
                            
-        <g:textField type="text" class="form-control" name="nombre" placeholder="${marca.nombreMarca}"/><br/>
+        <g:textField type="text" class="form-control" name="nombre" placeholder="${marca}"/><br/>
                         </div>
                     </div>
           <div class="form-group">
@@ -300,8 +285,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <g:actionSubmit class="btn btn-danger" value="guardar"/>
                                   
                                 </div>
+                                
                             </div>
-           
+      
         </g:form>
                            
                      
@@ -327,7 +313,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
-			  <p>© 2017 Visitors. All rights reserved | Design by <a href="">W3layouts</a></p>
+			  <p>© 2017 Visitors. All rights reserved | Design by <a href="">Gestion</a></p>
 			</div>
 		  </div>
   <!-- / footer -->

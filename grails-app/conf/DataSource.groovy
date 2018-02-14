@@ -19,7 +19,7 @@ environments {
     development {
         dataSource {
             dbCreate = "update" 
-            url = "jdbc:postgresql://localhost:5432/mantenimientoauto"
+            url = "jdbc:postgresql://localhost:5432/sistemagestion"
                username = "postgres"
                password = 'joel'
         }
