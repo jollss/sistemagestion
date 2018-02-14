@@ -9,7 +9,9 @@ class BootStrap {
    def userRole = new Role(authority: "ROLE_MECANICO").save(flush:true)
    def adminRole = new Role(authority: "ROLE_USUARIO").save(flush:true)
    new UsuarioRole(user:user, role:userRole).save(flush:true)
-   new UsuarioRole(user:admin, role:adminRole).save(flush:true)  */ 
+   new UsuarioRole(user:admin, role:adminRole).save(flush:true) 
+   lineas para agregar un usuario de putaso jajajajja XD 
+    */ 
     }
     def destroy = {
     }

@@ -122,10 +122,12 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.yourapp.Usuar
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.yourapp.UsuarioRole'
 grails.plugin.springsecurity.authority.className = 'com.yourapp.Role'
 grails.plugin.springsecurity.logout.postOnly = false
+//grails.plugin.springsecurity.successHandler.defaultTargetgetUrl='sistemagestion'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+        //"/login/auth":      ["permitAll"],
 	'/':                ['permitAll'],
-	'/index':           ['permitAll'],
-        '/sistemagestion':  ['permitAll'],
+	'/index':           ['ROLE_MECANICO'],
+        '/sistemagestion.gsp':  ['ROLE_MECANICO'],
 	'/index.gsp':       ['permitAll'],
 	'/assets/**':       ['permitAll'],
 	'/**/js/**':        ['permitAll'],

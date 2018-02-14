@@ -2,10 +2,7 @@ package gestion
 import com.yourapp.Usuario
 import com.yourapp.UsuarioRole
 import com.yourapp.Role
-import grails.plugin.springsecurity.annotation.Secured
 
-
-@Secured(['ROLE_MECANICO'])
 class ServiciosController {
 def index(){ 
          [servicios:Servicios.findAll("from Servicios where estatus='pendiente'")]
@@ -25,7 +22,7 @@ def index(){
             servicios.save(flush:true) 
         redirect (action:"index")
     }
-  @Secured(['ROLE_USUARIO'])
+ 
   def crearcita(){
     [marcas:Marcas.findAll(),automoviles:Automovil.findAll(),tiposervicios:Tiposervicio.findAll()
           ,usuarios:Usuario.findAll(),usuariosrol:UsuarioRole.findAll("from UsuarioRole where role_id=2")]
