@@ -25,7 +25,7 @@ def index(){
             servicios.save(flush:true) 
         redirect (action:"index")
     }
-  
+  @Secured(['ROLE_USUARIO'])
   def crearcita(){
     [marcas:Marcas.findAll(),automoviles:Automovil.findAll(),tiposervicios:Tiposervicio.findAll()
           ,usuarios:Usuario.findAll(),usuariosrol:UsuarioRole.findAll("from UsuarioRole where role_id=2")]

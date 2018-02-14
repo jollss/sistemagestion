@@ -119,10 +119,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <i class="fa fa-book"></i>
                         <span>MARCAS</span>
                     </a>
-                    <ul class="sub">
-                        
-						<li><g:link controller="Marcas" action="guardarmarca">agregar marca</g:link></li>
-						<li> <g:link url="[action:'index',controller:'Servicios']">Hacer Servicio</g:link></li>
+                   <ul class="sub">
+         <li><g:link controller="Marcas" action="guardarmarca">agregar marca</g:link></li>
+<li> <g:link url="[action:'index',controller:'Servicios']">Hacer Servicio</g:link></li>
                         
                     </ul>
                 </li>

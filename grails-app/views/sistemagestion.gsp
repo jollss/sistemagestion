@@ -87,11 +87,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-users" ></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-					<h4>USUARIO</h4>
+					
+                        <g:link url="[action:'crearcita',controller:'Servicios']"><h4>USUARIO</h4></g:link></li>	
 						
 						<p>checar estatus y creacion de la cita</p>
 					</div>
 				  <div class="clearfix"> </div>
+                                  
 				</div><!--ESTE ES EL CHIDO HAHAHAH  -->
 			</div>
 			
@@ -101,7 +103,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-						<h4>MECANICO</h4>
+					<g:link url="[action:'index',controller:'Servicios']"><h4>MECANICO</h4></g:link></li>	
+                                            
 						
 						<p>hacer servicio,agrega marcas,automoviles..etc</p>
 					</div>
