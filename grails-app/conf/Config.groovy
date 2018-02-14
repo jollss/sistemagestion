@@ -126,15 +126,21 @@ grails.plugin.springsecurity.successHandler.defaultTargetgetUrl='index'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
      
 	'/':                ['permitAll'],
-    //inicio de index de sistemagestion donde estan los cudraditos
+      //inicio de index de sistemagestion donde estan los cudraditos
 	'/index':           ['ROLE_MECANICO','ROLE_USUARIO'],
      //fin
+     //Servicios inicio
+        '/Servicios/hacerservicio': ['ROLE_MECANICO'],
         '/Servicios/index': ['ROLE_MECANICO'],
         '/Servicios/crearcita': ['ROLE_USUARIO'],
-        '/Marcas/guardarmarca': ['ROLE_MECANICO'],
+        '/Servicios/guardar': ['ROLE_USUARIO'],        
+     //Servicios fin
+     //inicio Marcas
         '/Marcas/modificarmarca': ['ROLE_MECANICO'],
-        '/Marcas/guardar': ['ROLE_MECANICO'],
+        '/Marcas/guardarmarca': ['ROLE_MECANICO'],
         '/Marcas/eliminar': ['ROLE_MECANICO'],
+        '/Marcas/guardar': ['ROLE_MECANICO'],
+     //Marcas fin
 	'/index.gsp':       ['permitAll'],
 	'/assets/**':       ['permitAll'],
 	'/**/js/**':        ['permitAll'],

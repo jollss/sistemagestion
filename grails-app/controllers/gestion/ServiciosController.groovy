@@ -25,7 +25,7 @@ def index(){
  
   def crearcita(){
     [marcas:Marcas.findAll(),automoviles:Automovil.findAll(),tiposervicios:Tiposervicio.findAll()
-          ,usuarios:Usuario.findAll(),usuariosrol:UsuarioRole.findAll("from UsuarioRole where role_id=2")]
+          ,usuarios:Usuario.findAll(),usuariosrol:UsuarioRole.findAll("from UsuarioRole where role_id=3")]
          
 
    }
