@@ -60,7 +60,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- inbox dropdown start-->
         <center>
      SISTEMA DE GESTION DE CITAS Y SERVICIOS
-    </center>
+    
+        </center>
         <!-- inbox dropdown end -->
         <!-- notification dropdown start-->
     
@@ -92,6 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <g:link url="[action:'crearcita',controller:'Servicios']"><h4>USUARIO</h4></g:link></li>	
 						
 						<p>checar estatus y creacion de la cita</p>
+                                                 <p><g:link class="fa fa-key" controller='logout'>cerrar sesion</g:link></p>
 					</div>
 				  <div class="clearfix"> </div>
                                   
@@ -108,6 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             
 						
 						<p>hacer servicio,agrega marcas,automoviles..etc</p>
+                                                <p><g:link class="fa fa-key" controller='logout'>cerrar sesion</g:link></p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>

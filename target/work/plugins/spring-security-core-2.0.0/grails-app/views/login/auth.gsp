@@ -1,124 +1,69 @@
-<html>
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
 <head>
-	<meta name='layout' content='main'/>
-	<title><g:message code="springSecurity.login.title"/></title>
-	<style type='text/css' media='screen'>
-	#login {
-		margin: 15px 0px;
-		padding: 0px;
-		text-align: center;
-	}
-
-	#login .inner {
-		width: 340px;
-		padding-bottom: 6px;
-		margin: 60px auto;
-		text-align: left;
-		border: 1px solid #aab;
-		background-color: #f0f0fa;
-		-moz-box-shadow: 2px 2px 2px #eee;
-		-webkit-box-shadow: 2px 2px 2px #eee;
-		-khtml-box-shadow: 2px 2px 2px #eee;
-		box-shadow: 2px 2px 2px #eee;
-	}
-
-	#login .inner .fheader {
-		padding: 18px 26px 14px 26px;
-		background-color: #f7f7ff;
-		margin: 0px 0 14px 0;
-		color: #2e3741;
-		font-size: 18px;
-		font-weight: bold;
-	}
-
-	#login .inner .cssform p {
-		clear: left;
-		margin: 0;
-		padding: 4px 0 3px 0;
-		padding-left: 105px;
-		margin-bottom: 20px;
-		height: 1%;
-	}
-
-	#login .inner .cssform input[type='text'] {
-		width: 120px;
-	}
-
-	#login .inner .cssform label {
-		font-weight: bold;
-		float: left;
-		text-align: right;
-		margin-left: -105px;
-		width: 110px;
-		padding-top: 3px;
-		padding-right: 10px;
-	}
-
-	#login #remember_me_holder {
-		padding-left: 120px;
-	}
-
-	#login #submit {
-		margin-left: 15px;
-	}
-
-	#login #remember_me_holder label {
-		float: none;
-		margin-left: 0;
-		text-align: left;
-		width: 200px
-	}
-
-	#login .inner .login_message {
-		padding: 6px 25px 20px 25px;
-		color: #c33;
-	}
-
-	#login .inner .text_ {
-		width: 120px;
-	}
-
-	#login .inner .chk {
-		height: 12px;
-	}
-	</style>
+<title><g:message code="springSecurity.login.title"/></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="../css/bootstrap.min.css" >
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="../css/style.css" rel='stylesheet' type='text/css' />
+<link href="../css/style-responsive.css" rel="stylesheet"/>
+<!-- font CSS -->
+<link href='..///fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="../css/font.css" type="text/css"/>
+<link href="../css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<script src="../js/jquery2.0.3.min.js"></script>
 </head>
-
 <body>
-<div id='login'>
-	<div class='inner'>
-		<div class='fheader'><g:message code="springSecurity.login.header"/></div>
+<div class="log-w3">
+<div class="w3layouts-main">
+		
 
 		<g:if test='${flash.message}'>
 			<div class='login_message'>${flash.message}</div>
 		</g:if>
-
+	<h2>INGRESAR</h2>
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
-			<p>
-				<label for='username'><g:message code="springSecurity.login.username.label"/>:</label>
-				<input type='text' class='text_' name='j_username' id='username'/>
-			</p>
 
-			<p>
-				<label for='password'><g:message code="springSecurity.login.password.label"/>:</label>
-				<input type='password' class='text_' name='j_password' id='password'/>
-			</p>
+			<input type="text" class="ggg" name='j_username' id='username' placeholder="NOMBRE" required="">
+			<input type="password" class="ggg" name='j_password' id='password' placeholder="Contraseña" required="">
+			
 
-			<p id="remember_me_holder">
+
+<p id="remember_me_holder">
 				<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
 				<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
 			</p>
 
-			<p>
-				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
-			</p>
+				<div class="clearfix"></div>
+	<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
 		</form>
-	</div>
+		
+</div>
 </div>
 <script type='text/javascript'>
 (function() {
 	document.forms['loginForm'].elements['j_username'].focus();
 })();
 </script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../js/scripts.js"></script>
+<script src="../js/jquery.slimscroll.js"></script>
+<script src="../js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../js/jquery.scrollTo.js"></script>
 </body>
 </html>

@@ -122,12 +122,19 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.yourapp.Usuar
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.yourapp.UsuarioRole'
 grails.plugin.springsecurity.authority.className = 'com.yourapp.Role'
 grails.plugin.springsecurity.logout.postOnly = false
-//grails.plugin.springsecurity.successHandler.defaultTargetgetUrl='sistemagestion'
+grails.plugin.springsecurity.successHandler.defaultTargetgetUrl='index'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-        //"/login/auth":      ["permitAll"],
+     
 	'/':                ['permitAll'],
-	'/index':           ['ROLE_MECANICO'],
-        '/sistemagestion.gsp':  ['ROLE_MECANICO'],
+    //inicio de index de sistemagestion donde estan los cudraditos
+	'/index':           ['ROLE_MECANICO','ROLE_USUARIO'],
+     //fin
+        '/Servicios/index': ['ROLE_MECANICO'],
+        '/Servicios/crearcita': ['ROLE_USUARIO'],
+        '/Marcas/guardarmarca': ['ROLE_MECANICO'],
+        '/Marcas/modificarmarca': ['ROLE_MECANICO'],
+        '/Marcas/guardar': ['ROLE_MECANICO'],
+        '/Marcas/eliminar': ['ROLE_MECANICO'],
 	'/index.gsp':       ['permitAll'],
 	'/assets/**':       ['permitAll'],
 	'/**/js/**':        ['permitAll'],

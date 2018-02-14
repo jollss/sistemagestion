@@ -107,8 +107,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             
 						
 						<p>hacer servicio,agrega marcas,automoviles..etc</p>
+                                            
+                                                
 					</div>
+                                          
 				  <div class="clearfix"> </div>
+                                  
 				</div>
 			</div>
 		   <div class="clearfix"> </div>
