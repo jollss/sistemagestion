@@ -140,6 +140,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/Marcas/guardarmarca': ['ROLE_MECANICO'],
         '/Marcas/eliminar': ['ROLE_MECANICO'],
         '/Marcas/guardar': ['ROLE_MECANICO'],
+        '/Marcas/index': ['ROLE_MECANICO'],
+        '/Marcas/save': ['ROLE_MECANICO'],
      //Marcas fin
 	'/index.gsp':       ['permitAll'],
 	'/assets/**':       ['permitAll'],

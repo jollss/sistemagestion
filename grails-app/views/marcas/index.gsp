@@ -81,19 +81,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
-            <input type="text" class="form-control search" placeholder=" Search">
-        </li>
+      
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="images/2.png">
-                <span class="username">John Doe</span>
+                <img alt="" src="../images/2.png">
+                <span class="username"><sec:username/></span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
-                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <!--<li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>-->
                 <li><g:link class="fa fa-key" controller='logout'>cerrar sesion</g:link></li>
             </ul>
         </li>
@@ -180,7 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><span class="text-ellipsis">  
                    <g:link  class="fa fa-check text-success text-active" controller="Marcas" action="modificarmarca" id="${marca.id}"></g:link>
                         </span></td>
-            <td><span class="text-ellipsis"><g:link class="fa fa-times text-danger text" controller="Marcas" action="eliminar" id="${marca.id}">eliminar</g:link>
+            <td><span class="text-ellipsis"><g:link class="fa fa-times text-danger text" controller="Marcas" action="eliminar" id="${marca.id}"></g:link>
                     </a></span></td>            
           </tr>
         </tbody>
@@ -211,7 +209,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
-			  <p>© 2017 Visitors. All rights reserved | Design by <a href="">Gestion</a></p>
+			    <p>© 2018 ANG&JOE. TODOS LOS DERECHOS RESERVADOS | DISEÑADO POR <a href="">GESTION</a></p>
 			</div>
 		  </div>
   <!-- / footer -->
