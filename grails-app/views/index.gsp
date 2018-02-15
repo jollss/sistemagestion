@@ -65,7 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         HOY ES :${new Date()}
         </g:set>
         <p>${dia}</p>
-      
+              
+		</div>	
         </center>
         <!-- inbox dropdown end -->
         <!-- notification dropdown start-->
@@ -89,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 			</div>
             <!------------------------------inicio de if usuarios-------------------------------------------------------->
-    
+    <sec:ifAnyGranted roles="ROLE_USUARIO">
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-1">
 					<div class="col-md-4 market-update-right">
@@ -102,6 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p>checar estatus y creacion de la cita</p>
                                                  <p><g:link class="fa fa-key" controller='logout'>cerrar sesion</g:link></p>
 					</div>
+                                          </sec:ifAnyGranted>
 				  <div class="clearfix"> </div>
                                   
 				</div>
@@ -109,7 +111,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 <!---------------------------------------------fin de if usuarios -------------------------------------------->
                    <!------------------------------inicio de else mecanicos-------------------------------------------------------->
-			
+		
+                                                <sec:ifAnyGranted roles="ROLE_MECANICO">
+
+
                                                  <div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-4">
 					<div class="col-md-4 market-update-right">
@@ -125,9 +130,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
+                                                 </sec:ifAnyGranted>
+                        
       <!---------------------------------------------fin de else mecanicos -------------------------------------------->
 		   <div class="clearfix"> </div>
-		</div>	
+        
 		<!-- //market-->
 	
 		
