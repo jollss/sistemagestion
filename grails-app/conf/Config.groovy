@@ -122,7 +122,7 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.yourapp.Usuar
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.yourapp.UsuarioRole'
 grails.plugin.springsecurity.authority.className = 'com.yourapp.Role'
 grails.plugin.springsecurity.logout.postOnly = false
-grails.plugin.springsecurity.successHandler.defaultTargetgetUrl='index'
+grails.plugin.springsecurity.successHandler.defaultTargetgetUrl='/servicios/index'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
      
 	'/':                ['permitAll'],
@@ -130,18 +130,20 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/index':           ['ROLE_MECANICO','ROLE_USUARIO'],
      //fin
      //Servicios inicio
-        '/Servicios/hacerservicio': ['ROLE_MECANICO'],
-        '/Servicios/index': ['ROLE_MECANICO'],
-        '/Servicios/crearcita': ['ROLE_USUARIO'],
-        '/Servicios/guardar': ['ROLE_USUARIO'],        
+        '/servicios/hacerservicio': ['ROLE_MECANICO'],
+        '/servicios/index': ['ROLE_MECANICO'],
+        '/servicios/crearcita': ['ROLE_USUARIO'],
+        '/servicios/guardar': ['ROLE_USUARIO'],       
+        '/servicios/save': ['ROLE_MECANICO'], 
+    
      //Servicios fin
      //inicio Marcas
-        '/Marcas/modificarmarca': ['ROLE_MECANICO'],
-        '/Marcas/guardarmarca': ['ROLE_MECANICO'],
-        '/Marcas/eliminar': ['ROLE_MECANICO'],
-        '/Marcas/guardar': ['ROLE_MECANICO'],
-        '/Marcas/index': ['ROLE_MECANICO'],
-        '/Marcas/save': ['ROLE_MECANICO'],
+        '/marcas/modificarmarca': ['ROLE_MECANICO'],
+        '/marcas/guardarmarca': ['ROLE_MECANICO'],
+        '/marcas/eliminar': ['ROLE_MECANICO'],
+        '/marcas/guardar': ['ROLE_MECANICO'],
+        '/marcas/index': ['ROLE_MECANICO'],
+        '/marcas/save': ['ROLE_MECANICO'],
      //Marcas fin
 	'/index.gsp':       ['permitAll'],
 	'/assets/**':       ['permitAll'],

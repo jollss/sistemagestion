@@ -141,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
-			  <p>© 2018. All rights reserved | Design by <a href="">gestion</a></p>
+			 <p>© 2018 ANG&JOE. TODOS LOS DERECHOS RESERVADOS | DISEÑADO POR <a href="">GESTION</a></p>
                           <!--  <p>© 2018. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>-->
 			</div>
 		  </div>
