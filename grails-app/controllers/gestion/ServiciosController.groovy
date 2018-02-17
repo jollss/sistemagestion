@@ -5,7 +5,9 @@ import com.yourapp.Role
 
 class ServiciosController {
     def springSecurityService
-def index(){  def usuario = springSecurityService.currentUser
+def index()
+{  
+    def usuario = springSecurityService.currentUser
 def servicios = Servicios.findAllWhere(usuario:usuario,estatus:"pendiente")
  [servicios:servicios]
 }
